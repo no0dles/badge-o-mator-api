@@ -6,7 +6,7 @@ pipeline:
   test:
     image: golang:1.8.3
     commands:
-      - go test test/* -cover $(go list ./... | grep -v /vendor/)
+      - go test -cover $(go list ./... | grep -v /vendor/)
 
   publish:
     image: no0dles/drone-plugin-gcr

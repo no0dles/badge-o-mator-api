@@ -1,12 +1,12 @@
 package main
 
 import (
-	"net/http"
 	"github.com/ajstarks/svgo"
 	"fmt"
 	"errors"
 	"strings"
 	"regexp"
+	"io"
 )
 
 type Banner struct {
@@ -105,7 +105,6 @@ func CreateBanner(text1 string, text2 string, size string, color string) (*Banne
 		return nil, errors.New("invalid size")
 	}
 
-
 	colorMap, ok := colors[color]
 	if ok {
 		banner.textColor1 = colorMap[0]
@@ -119,7 +118,7 @@ func CreateBanner(text1 string, text2 string, size string, color string) (*Banne
 	return banner, nil
 }
 
-func generateBanner(w http.ResponseWriter, banner *Banner) {
+func generateBanner(w io.Writer, banner *Banner) {
 	canvas := svg.New(w)
 
 	var (
