@@ -1,0 +1,25 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "r+Oj7bxw0p0y15YHlN9soV5L+c4=",
+			"path": "github.com/ajstarks/svgo",
+			"revision": "fec71ff44529c89ddb4211a62f3d672f31e50bc5",
+			"revisionTime": "2017-05-24T22:37:13Z"
+		},
+		{
+			"checksumSHA1": "fcfxNsCuheCrubAAl6zWgimCnLY=",
+			"path": "github.com/codegangsta/inject",
+			"revision": "33e0aa1cb7c019ccc3fbe049a8262a6403d30504",
+			"revisionTime": "2015-01-14T23:56:00Z"
+		},
+		{
+			"checksumSHA1": "yQqYQc9nHrkGNNEdQ0bcwb1qe3o=",
+			"path": "github.com/go-martini/martini",
+			"revision": "22fa46961aabd2665cf3f1343b146d20028f5071",
+			"revisionTime": "2017-01-21T21:58:54Z"
+		}
+	],
+	"rootPath": "github.com/no0dles/batch-o-mator"
+}

@@ -1,0 +1,22 @@
+workspace:
+  base: /go
+  path: src/github.com/no0dles/batch-o-mator
+
+pipeline:
+  test:
+    image: golang:1.8.3
+    commands:
+      - go test test/* -cover $(go list ./... | grep -v /vendor/)
+
+  publish:
+    image: no0dles/drone-plugin-gcr
+    privileged: true
+    registry: eu.gcr.io
+    repo: kubernetes-169708/batch-o-mator
+    cache_from: latest
+    tags:
+      - latest
+      - ${DRONE_TAG}
+    secrets: [ GOOGLE_TOKEN ]
+    when:
+      event: tag
