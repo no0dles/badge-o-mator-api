@@ -3,9 +3,7 @@ package main
 import (
 	"testing"
 	"bytes"
-	"fmt"
 	"bufio"
-	"io/ioutil"
 )
 
 func TestEmptyBadge(t *testing.T) {
