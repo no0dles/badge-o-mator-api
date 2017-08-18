@@ -44,6 +44,7 @@ var colors = map[string][]string{
 	"15": {"#fff", "#fff", "#f1c40f", "#f39c12"},
 	"16": {"#fff", "#fff", "#e67e22", "#d35400"},
 	"17": {"#fff", "#fff", "#e74c3c", "#c0392b"},
+	"18": {"#fff", "#fff", "#a7bfc1", "#7f8c8d"},
 
 }
 
