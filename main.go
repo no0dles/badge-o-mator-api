@@ -10,7 +10,7 @@ func main() {
 
 	m := martini.Classic()
 
-	m.Get("/badge/:size/:color/:text1/:text2", badgeHandler)
+	m.Get("/api/badge/:size/:color/:text1/:text2", badgeHandler)
 
 	m.NotFound(func(res http.ResponseWriter) {
 		json.NewEncoder(res).Encode(map[string]string{"message": "not found" })
