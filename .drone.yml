@@ -1,6 +1,6 @@
 workspace:
   base: /go
-  path: src/github.com/no0dles/batch-o-mator
+  path: src/github.com/no0dles/badge-o-mator
 
 pipeline:
   test:
@@ -12,7 +12,7 @@ pipeline:
     image: no0dles/drone-plugin-gcr
     privileged: true
     registry: eu.gcr.io
-    repo: kubernetes-169708/batch-o-mator
+    repo: kubernetes-169708/badge-o-mator-api
     cache_from: latest
     tags:
       - latest
