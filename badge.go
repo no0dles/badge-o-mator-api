@@ -91,16 +91,16 @@ func CreateBanner(text1 string, text2 string, size string, color string) (*Banne
 	banner.text2 = text2
 
 	if size == "sm" {
-		banner.fontSize = 8
+		banner.fontSize = 10
 		banner.paddingWidth = 10
-		banner.paddingHeight = 2
+		banner.paddingHeight = 4
 	} else if size == "md" {
 		banner.fontSize = 15
 		banner.paddingWidth = 15
 		banner.paddingHeight = 4
 	} else if size == "lg" {
-		banner.fontSize = 30
-		banner.paddingWidth = 30
+		banner.fontSize = 20
+		banner.paddingWidth = 20
 		banner.paddingHeight = 5
 	} else {
 		return nil, errors.New("invalid size")
