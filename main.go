@@ -10,6 +10,14 @@ func main() {
 
 	m := martini.Classic()
 
+	m.Get("/api/healthz", func(w http.ResponseWriter) {
+		w.WriteHeader(200)
+	})
+
+	m.Get("/api/readiness", func(w http.ResponseWriter) {
+		w.WriteHeader(200)
+	})
+
 	m.Get("/api/badge/:size/:color/:text1/:text2", badgeHandler)
 
 	m.NotFound(func(res http.ResponseWriter) {
